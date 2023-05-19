@@ -2,28 +2,43 @@ import logo from './logo.svg';
 import './App.css';
 import Add from './component/Add/Add';
 import Sub from './component/Sub/Sub';
+import { useState } from 'react';
 function App() {
+  const[inputValue,setinputValue]=useState(0)
+  
+ const printvalue=()=>
+ {
+  console.log('inputvalue',inputValue)
+ }
+ 
   return (
-    
+   
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Add a='2' b='3'></Add>
-      <Sub a='4' b='3'/>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h1>hellow achal kharabe</h1>
-          <h2>these is my 3rd commit</h2>
-          Learn React
-        </a>
-      </header>
+
+      <div>
+      <input 
+       value={inputValue}
+       onChange={(e)=> {
+         setinputValue(e.target.value)
+       //console.logo('inputvalue',inputValue)
+           }
+    } type="number"
+       placeholder='enter number'>
+
+       </input>
+       
+        
+      
+          
+        </div>
+        <p>test p tag {inputValue}</p>
+        <button onClick={printvalue}>print</button>
+        <Add a={inputValue} b="4"></Add>
+      <Sub a={inputValue} b='3'/>
+
+      
+       
+      
     </div>
   );
 }
