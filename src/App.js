@@ -34,7 +34,7 @@ function App() {
         <p>test p tag {inputValue}</p>
         <button onClick={printvalue}>print</button>
         <Add a={inputValue} b="4"></Add>
-      <Sub a={inputValue} b='3'/>
+      <Sub a={inputValue} b='1'/>
 
       
        
