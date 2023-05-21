@@ -5,7 +5,7 @@ import Sub from './component/Sub/Sub';
 import { useState } from 'react';
 function App() {
   const[inputValue,setinputValue]=useState(0)
-  
+  const[inputValue1,setinputValue1]=useState(0);
  const printvalue=()=>
  {
   console.log('inputvalue',inputValue)
@@ -27,13 +27,25 @@ function App() {
 
        </input>
        
-        
-      
-          
-        </div>
-        <p>test p tag {inputValue}</p>
+         </div>
+         <div>
+      <input 
+       value={inputValue1}
+       onChange={(e)=> {
+         setinputValue1(e.target.value)
+       //console.logo('inputvalue',inputValue)
+           }
+    }
+     type="number"
+       placeholder='enter number'>
+
+       </input>
+       
+         </div>
+        <p>test p tag {inputValue} {inputValue1}</p>
+
         <button onClick={printvalue}>print</button>
-        <Add a={inputValue} b="4"></Add>
+        {inputValue1 && inputValue? <Add a={inputValue1} b="4"></Add> :''}
       <Sub a={inputValue} b='1'/>
 
       
