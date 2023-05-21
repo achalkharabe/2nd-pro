@@ -42,7 +42,7 @@ function App() {
        </input>
        
          </div>
-        <p>test p tag {inputValue} {inputValue1}</p>
+        <p>test p tag  {inputValue} {inputValue1}</p>
 
         <button onClick={printvalue}>print</button>
         {inputValue1 && inputValue? <Add a={inputValue1} b="4"></Add> :''}
