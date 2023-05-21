@@ -37,7 +37,7 @@ function App() {
            }
     }
      type="number"
-       placeholder='enter number'>
+       placeholder='enter number' >
 
        </input>
        
